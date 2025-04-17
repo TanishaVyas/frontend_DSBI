@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Employee Wellness - Boost Health & Productivity</title>
+    <link rel="stylesheet" href="styles.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+    />
+    <style>
+      html {
+        scroll-behavior: smooth;
+      }
+
+      body {
+        margin: 0;
+        font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+        background-color: #f4f7fa;
+      }
+
+      section.reports {
+        height: 100vh;
+        padding: 7rem 2rem 2rem;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: center;
+        background-color: #ffffff;
+      }
+
+      section.reports h2 {
+        font-size: 2.5rem;
+        margin-bottom: 1rem;
+        color: #005b96;
+      }
+
+      section.reports p {
+        font-size: 1.1rem;
+        color: #333;
+        margin-bottom: 1.5rem;
+        text-align: center;
+        max-width: 800px;
+      }
+
+      .iframe-container {
+        width: 100%;
+        height: 100%;
+        flex-grow: 1;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+
+      .iframe-container iframe {
+        width: 100%;
+        height: 100%;
+        border: none;
+      }
+
+      footer {
+        text-align: center;
+        padding: 1rem;
+        background-color: #eaeaea;
+        font-size: 0.9rem;
+        color: #333;
+      }
+    </style>
+  </head>
+
+  <body>
+    <nav>
+      <div class="logo">Wellness BI</div>
+      <ul>
+        <li><a href="#home">Home</a></li>
+        <li><a href="#problem">Problem</a></li>
+        <li><a href="#solution">Solution</a></li>
+        <li><a href="#features">Features</a></li>
+        <li><a href="#reports">Reports</a></li>
+      </ul>
+    </nav>
+
+    <section class="hero" id="home">
+      <h1>Real-Time Employee Wellness Insights</h1>
+      <div class="stat-highlight">
+        <div class="number" id="counter">₹0</div>
+        <p>Poor employee well-being costs Indian companies every year.</p>
+      </div>
+      <p>
+        Wellness BI helps organizations detect health risks early, enhance
+        well-being, and measure impact all in real time.
+      </p>
+    </section>
+
+    <section class="problem" id="problem">
+      <h2>Workplace Health Challenges</h2>
+      <div class="problem-grid">
+        <div class="problem-item">
+          <i class="fas fa-eye-slash"></i>
+          <p>Lack of real-time visibility into employee health and habits.</p>
+        </div>
+        <div class="problem-item">
+          <i class="fas fa-users-slash"></i>
+          <p>Low participation rates in wellness programs.</p>
+        </div>
+        <div class="problem-item">
+          <i class="fas fa-heart-broken"></i>
+          <p>Delayed identification of health risks and burnout.</p>
+        </div>
+        <div class="problem-item">
+          <i class="fas fa-chart-line"></i>
+          <p>Absence of measurable insights on program effectiveness.</p>
+        </div>
+      </div>
+      <p class="problem-fact">
+        <strong
+          ><i class="fas fa-exclamation-triangle"></i> 80% of India's workforce
+          reports mental health issues — Economic Times</strong
+        >
+      </p>
+    </section>
+
+    <section class="solution" id="solution">
+      <h2>The Wellness BI Solution</h2>
+      <p>
+        Wellness BI transforms real-world health data into actionable insights,
+        empowering organizations to proactively boost employee well-being,
+        reduce risks, and foster a healthier, more productive workplace.
+      </p>
+    </section>
+
+    <section class="features" id="features">
+      <h2>Key Features</h2>
+      <div class="features-list">
+        <div class="feature">
+          <i class="fas fa-bullseye"></i>
+          <span>Facilitates wellness goal setting and impact reporting.</span>
+        </div>
+        <div class="feature">
+          <i class="fas fa-walking"></i>
+          <span
+            >Continuously monitors health metrics like steps, calories, and
+            distance.</span
+          >
+        </div>
+        <div class="feature">
+          <i class="fas fa-chart-line"></i>
+          <span
+            >Visualizes health trends to highlight opportunities for
+            improvement.</span
+          >
+        </div>
+        <div class="feature">
+          <i class="fas fa-user-md"></i>
+          <span
+            >Delivers personalized health recommendations to employees.</span
+          >
+        </div>
+        <div class="feature">
+          <i class="fas fa-heartbeat"></i>
+          <span
+            >Enables early detection of potential health risks and
+            burnout.</span
+          >
+        </div>
+      </div>
+    </section>
+
+    <!-- New Reports Section -->
+    <section class="reports" id="reports">
+      <h2>Live Wellness Dashboard</h2>
+      <p>
+        View your employees' well-being insights in real time through our
+        embedded Power BI report.
+      </p>
+      <div class="iframe-container">
+        <iframe
+          title="dsbi_finalworking23"
+          src="https://app.powerbi.com/reportEmbed?reportId=ba5b6b3c-3e8e-4ec2-8385-41ab5c2e62f1&autoAuth=true&embeddedDemo=true"
+          allowfullscreen="true"
+        ></iframe>
+      </div>
+    </section>
+
+    <footer>&copy; 2025 Wellness BI | Empowering Employee Wellness</footer>
+
+    <script>
+      // Counter animation script
+      document.addEventListener("DOMContentLoaded", function () {
+        const counter = document.getElementById("counter");
+        let current = 0;
+        const target = 116000000000; // ₹1.16 lakh crore
+        const duration = 3000; // ms
+        const steps = 60;
+        const increment = target / steps;
+        const formatCurrency = (num) =>
+          "₹" + (num / 10000000).toFixed(2) + " Cr"; // Format to crore
+
+        function animateCount() {
+          let count = 0;
+          const interval = setInterval(() => {
+            count += increment;
+            if (count >= target) {
+              count = target;
+              clearInterval(interval);
+            }
+            counter.innerText = formatCurrency(count);
+          }, duration / steps);
+        }
+
+        animateCount();
+      });
+    </script>
+  </body>
+</html>
